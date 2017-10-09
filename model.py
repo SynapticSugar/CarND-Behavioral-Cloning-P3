@@ -4,7 +4,7 @@ import numpy as np
 import sklearn
 import matplotlib.pyplot as plt
 from keras.models import Sequential, Model
-from keras.layers import Flatten, Dense, Lambda, Cropping2D, Convolution2D, Dropout, ELU
+from keras.layers import Flatten, Dense, Lambda, Cropping2D, Convolution2D, Dropout
 from keras.callbacks import ModelCheckpoint, Callback
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
@@ -54,7 +54,7 @@ def addDistortion(img):
 def generator(data, batch_size=128):
     '''
     Method to generate data in parallel with training the network in batches.
-    Random probablity to flip the image and angle as well as randomyl apply 
+    Random probablity to flip the image and angle as well as randomly apply 
     distortion.
     '''
     num_samples = len(data)
