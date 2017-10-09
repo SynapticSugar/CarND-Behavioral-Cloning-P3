@@ -157,10 +157,8 @@ history_object = model.fit_generator(train_generator, samples_per_epoch=len(trai
     validation_data=validation_generator, nb_val_samples=len(validation_sample), nb_epoch=100,
     callbacks=[checkpoint])
 
-############ Plot the model for visualization only #############
-#from keras.utils.visualize_util import plot
-#plot(model, to_file='model.png', show_shapes=True)
-################################################################
+from keras.utils.visualize_util import plot
+plot(model, to_file='model.png', show_shapes=True)
 
 # visualize a model summary
 print(model.summary())
